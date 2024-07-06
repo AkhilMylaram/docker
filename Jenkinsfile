@@ -1,7 +1,7 @@
 pipeline{
  agent any
  environment{
-  registry= "akhilmylaram/register:latest"
+  registry= "akhilmylaram/vprohelm"
   registeryCredentials= "dockerhub"
  }
  stages{
