@@ -8,5 +8,5 @@ spec:
   resources:
     requests:
       storage: 5Gi
-  storageClassName: ""  # Ensure this is left empty to match the manual PV
+  storageClassName: custom-storage  # Matches the StorageClass
 

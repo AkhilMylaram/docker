@@ -1,0 +1,17 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: custom-storage
+provisioner: kubernetes.io/aws-ebs  # Provisioner for AWS EBS
+volumeBindingMode: Immediate        # Volume binds immediately
+parameters:
+  type: gp2                        # General-purpose SSD (gp2)
+  fsType: ext4                     # File system type
+  encrypted: "true"                # Enable encryption
+allowedTopologies:                 # Restrict volume to specific zones
+- matchLabelExpressions:
+  - key: topology.ebs.csi.aws.com/zone
+    values:
+    - us-east-1d           # Replace with the appropriate availability zone
+
+
