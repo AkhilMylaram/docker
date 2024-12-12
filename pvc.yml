@@ -8,5 +8,5 @@ spec:
   resources:
     requests:
       storage: 5Gi
-  storageClassName: ""  # Leave empty to ensure binding to manually created PV
+  storageClassName: ""  # Ensure this is left empty to match the manual PV
 

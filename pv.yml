@@ -8,8 +8,8 @@ spec:
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: ""  # Leave empty to match manual provisioning
+  storageClassName: ""  # Ensure this is left empty for manual PV provisioning
   awsElasticBlockStore:
-    volumeID: vol-0543773fa75cd5d49  # Make sure this matches the volume created manually
+    volumeID: vol-0543773fa75cd5d49  # Correct EBS volume ID
     fsType: ext4
 
